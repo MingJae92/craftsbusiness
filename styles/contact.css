@@ -1,0 +1,242 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Abril Fatface', cursive;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images /background.jpg");
+    background-size: cover;
+}
+
+.subheader{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: chocolate;
+    position: relative;
+    top: 40%;
+}
+
+.header p{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 100px;
+}
+
+.hamburger-menu{
+    width: 55px;
+    height: 55px;
+    background-color: #67b67b;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+    transition: all 0.5s;
+}
+
+.bg-cover{
+    background-color: rgba(103, 182, 123, 0.9);
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    z-index: 100;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.line{
+    width: 30px;
+    height: 2px;
+    background-color: #eee;
+    margin: 2px 0;
+    transform-origin: right;
+    transition: all 0.5s;
+}
+
+.change .line-1{
+    transform: rotate(-40deg)translateY(-5px);
+    background-color: #67b67b;
+}
+
+.change .line-2{
+    opacity: 0;
+}
+
+.change .line-3{
+    transform: rotate(40deg)translateY( 5px);
+}
+
+.change .bg-cover {
+    transform: scale(150);
+}
+
+.change .hamburger-menu{
+    background-color: #eef0eb;
+}
+
+.nav-list{
+    position: fixed;
+    z-index: 200;
+    height: 35vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+}
+
+.change .nav-list {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-items{
+    margin: 1.5vh 0;
+}
+
+.nav-link{
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    transition: letter-spacing 0.2s;
+}
+
+.nav-link:hover{
+    letter-spacing: .8rem;
+}
+
+
+.main {
+    width: 100vw;
+    height: 70vh;
+    display: grid;
+    background-color: gold;
+    position: relative;
+}
+
+.main h1{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    color: limegreen;
+    margin: -5px 0px;
+    font-size: 75px;
+   
+}
+
+.main img{
+    width: 20vw;
+    height: 63vh;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+}
+
+.contact{
+    display: grid;
+    position: absolute;
+    z-index: 1;
+    width: 40vw;
+    left: 45%;
+    top: 102%;
+    height: 65vh;
+}
+
+.contact label{
+    padding: 5px 0px;
+}
+
+.contact input{
+    width: 40vw;
+    height: 4vh;
+}
+
+.contact textarea{
+    border: 2px solid grey;
+    resize: none;
+    overflow: auto;
+    height: 17vh;
+}
+
+.contact button{
+    margin: 10px 0px;
+    border: 2px solid darkcyan;
+    color: blue;
+    background-color: darksalmon;
+    font-family: 'Abril Fatface', cursive;
+    padding: 10px 0px;
+}
+
+.footer {
+    background-color:bisque;
+    width: 100vw;
+    height: 15vh;
+    margin: 0;
+    padding:0px 0px;
+    bottom: 0;
+    position: relative;
+}
+
+.footerbar{
+    display: flex;
+    padding: 50px 0px;
+    justify-content: center;
+}
+
+footer h1{
+    color: crimson;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.footericon li{
+    list-style: none;
+}
+
+.footericon{
+    display: flex;
+    justify-content:center;
+}
+
+.privacy p{
+    color: darkred;
+    text-align: center;
+    background-color: darkseagreen;
+    height: 5vh;
+    padding:5px 0px;
+}
+
+@media screen and (max-width: 397px){
+    .main h1{
+        font-size: 30px;
+    }
+}

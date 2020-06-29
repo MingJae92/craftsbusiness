@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html{
+    font-family: 'Abril Fatface', cursive;
+    margin: 0;
+    padding: 0;
+   
+}
+
+.header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images /background.jpg");
+    background-size: cover;
+}
+
+.subheader{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 40px;
+    text-align: center;
+    top: 40%;
+    position: relative;
+    color: darkturquoise;
+}
+
+.header p{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 100px;
+    position: relative;
+    top: 40%;
+}
+
+.hamburger-menu{
+    width: 55px;
+    height: 55px;
+    background-color: #67b67b;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+    transition: all 0.5s;
+}
+
+.bg-cover{
+    background-color: rgba(103, 182, 123, 0.9);
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    z-index: 100;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.line{
+    width: 30px;
+    height: 2px;
+    background-color: #eee;
+    margin: 2px 0;
+    transform-origin: right;
+    transition: all 0.5s;
+}
+
+.change .line-1{
+    transform: rotate(-40deg)translateY(-5px);
+    background-color: #67b67b;
+}
+
+.change .line-2{
+    opacity: 0;
+}
+
+.change .line-3{
+    transform: rotate(40deg)translateY( 5px);
+}
+
+.change .bg-cover {
+    transform: scale(150);
+}
+
+.change .hamburger-menu{
+    background-color: #eef0eb;
+}
+
+.nav-list{
+    position: fixed;
+    z-index: 200;
+    height: 35vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+}
+
+.change .nav-list {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-items{
+    margin: 1.5vh 0;
+}
+
+.nav-link{
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    transition: letter-spacing 0.2s;
+}
+
+.nav-link:hover{
+    letter-spacing: .8rem;
+}
+
+.container img{
+  position: relative;
+  height: 190px;
+  left: 5%;
+}
+
+.page{
+    position: absolute;
+    text-align: center;
+    left: 40%;
+}
+
+.page h1,
+p{
+   text-align: center;
+   margin: 5px 0px;
+}
+
+.reviews img{
+    height: 45vh;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px 0px;
+}
+
+.reviews{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 0px;
+    height: 100vh;
+    background-color: gold;
+}
+
+.fb {
+    display: grid;
+}
+
+.fb p{
+    position: absolute;
+    width: 33%;
+    height: 30%;
+    padding: 2em;
+}
+
+.checked {
+    color: orange;
+  }
+
+footer {
+    background-color:bisque;
+    width: 100vw;
+    margin: 0;
+    padding:0;
+}
+
+.footerbar{
+    display: flex;
+    padding: 50px 0px;
+    justify-content: center;
+}
+
+footer h1{
+    color: crimson;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+
+.footericon{
+    display: flex;
+    justify-content:center;
+    padding-bottom: 10px;
+    margin: 2px 0px; 
+}
+
+.footericon li{
+    list-style: none;
+}
+
+.privacy p{
+    color: darkred;
+    text-align: center;
+    background-color: darkseagreen;
+    height: 5vh;
+    padding:5px 0px;
+}
+
+    
+@media screen and (max-width:360px){
+    .privacy p{
+        color: darkred;
+        text-align: center;
+        background-color: darkseagreen;
+        height: 8vh;
+        padding:5px 0px;
+    }
+    .page h1,
+p{
+   color: hotpink;
+   text-align: center;
+   margin: 25px 0px;
+   font-size: 8px;
+}
+}

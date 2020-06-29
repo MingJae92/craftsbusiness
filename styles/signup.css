@@ -1,0 +1,344 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html{
+    font-family: 'Abril Fatface', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images /knitting.jpg");
+}
+
+.header p{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 100px;
+    position: relative;
+    text-align: center;
+    top: 40%;
+    
+}
+
+.hamburger-menu{
+    width: 55px;
+    height: 55px;
+    background-color: #67b67b;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+    transition: all 0.5s;
+}
+
+.bg-cover{
+    background-color: rgba(103, 182, 123, 0.9);
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    z-index: 100;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.line{
+    width: 30px;
+    height: 2px;
+    background-color: #eee;
+    margin: 2px 0;
+    transform-origin: right;
+    transition: all 0.5s;
+}
+
+.change .line-1{
+    transform: rotate(-40deg)translateY(-5px);
+    background-color: #67b67b;
+}
+
+.change .line-2{
+    opacity: 0;
+}
+
+.change .line-3{
+    transform: rotate(40deg)translateY( 5px);
+}
+
+.change .bg-cover {
+    transform: scale(150);
+}
+
+.change .hamburger-menu{
+    background-color: #eef0eb;
+}
+
+.nav-list{
+    position: fixed;
+    z-index: 200;
+    height: 65vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+}
+
+.change .nav-list {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-items{
+    margin: 1.5vh 0;
+}
+
+.nav-link{
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: .4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    transition: letter-spacing 0.2s;
+}
+
+.nav-link:hover{
+    letter-spacing: .8rem;
+}
+
+.container img{
+    position: relative;
+    left: 5%;
+}
+
+footer h1{
+    color: crimson;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.footericon{
+    display: flex;
+    justify-content:center;
+}
+
+.footericon li{
+    list-style: none;
+}
+
+.footer{
+    background-color:bisque;
+    width: 100vw;
+    margin: 0;
+    padding:0;
+    bottom: 0;
+}
+
+.privacy p{
+    color: darkred;
+    text-align: center;
+    background-color: darkseagreen;
+    height: 5vh;
+    padding:10px 0px
+}
+
+.formsign {
+    display: flex;
+    flex-flow: column;
+    background-color: gold;
+    height: 70vh;
+    padding: 5px 0px;
+}
+
+.subform{
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    align-items: center;
+    top:-5vh;
+}
+
+.formsign h1{
+    position: relative;
+    bottom: 300px;
+    text-align: center;
+    color: yellowgreen;
+}
+
+.formsign button{
+   background-color: red;
+   padding: 10px 0px;
+   margin:5px;
+   font-family: 'Abril Fatface', cursive;
+   width: 36%;
+}
+
+input[type=text],
+input[type=password]{
+  padding: 10px 0px;
+  font-family:'Abril Fatface', cursive;
+  width: 36%;
+}
+
+.formsign b {
+    font-size: 30px;
+    padding: 5px 0px;
+    left: 40%;
+    color: peru;
+}
+
+.formsign label{
+    padding: 5px 0px;
+}
+
+.formsign p{
+    color: deepskyblue;
+}
+
+
+@media screen and (max-device-width: 320px) and (max-device-width: 768px){
+    .header{
+        height: 50vh;
+    }
+    .header p{
+        font-size: 30px;
+        font-family: 'Abril Fatface', cursive;
+        position: relative;
+        text-align: center;
+    }
+    
+    .hamburger-menu{
+        right: 15px;
+    }
+    .bg-cover{
+        right: 15px;
+    }
+    .signup img{
+        width: 100vw;
+        height: 45vh;
+        display: grid;
+    }
+    .privacy p{
+        color: darkred;
+        text-align: center;
+        background-color: darkseagreen;
+        height: auto;
+        padding:10px 0px
+    }
+    .footer{
+        background-color:bisque;
+        width: 100vw;
+        margin: 0;
+        padding:0;
+        bottom: 0;
+        position: relative;
+    }
+    .subform{
+        display: flex;
+        flex-flow: column;
+        position: relative;
+        align-items: center;
+        top: -3vh;
+    }
+    
+    .formsign {
+        display: flex;
+        flex-flow: column;
+        justify-items: center;
+        background-color: gold;
+        height: 50vh;
+        position: relative;
+        top: 20%;
+        padding: 5px 0px;
+    }
+    .formsign h1{
+        position: relative;
+        bottom: 230px;
+        text-align: center;
+        font-size: 20px;
+        color: yellowgreen;
+    }
+    .formsign b {
+        font-size: 20px;
+        padding: 5px 0px;
+        left: 40%;
+        color: peru;
+    }
+    input[type=text],
+    input[type=password]{
+    padding: 10px 0px;
+    font-family:'Abril Fatface', cursive;
+    width: 35%;
+    height: 25px;
+    }
+    .formsign button {
+        background-color: red;
+        padding: 5px 0px;
+        margin: 5px;
+        font-family: 'Abril Fatface', cursive;
+        width: 35%;
+        height: 25px;
+    }
+    .formsign p{
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer h1{
+        font-size: 12px;
+        padding: 0px 0px;
+    }
+    .footericon{
+        padding-bottom: 0px;
+    }
+    .footericon img{
+       width: 20px;
+       height: 20px;
+    }
+    .privacy p{
+        font-size: 7px;
+        height: 3vh;
+        padding: 5px 0px;
+    }
+    .footer{
+        background-color:bisque;
+        width: 100vw;
+        margin: 0;
+        padding:0;
+        bottom: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
